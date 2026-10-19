@@ -68,7 +68,7 @@ export function PinnedGallery() {
         <div className="pinned-gallery__list">
           {galleryItems.map((item, index) => (
             <article className="pinned-gallery__card" key={item.title}>
-              <div className={`pinned-gallery__image pinned-gallery__image--${index + 1}`}>
+              <div className={`pinned-gallery__image pinned-gallery__image--${index + 1}${item.category === 'Full looks' ? ' pinned-gallery__image--full-look' : ''}`}>
                 <Image src={item.image} alt={item.alt} fill sizes="(max-width: 600px) 47vw, 30vw" quality={90} />
               </div>
               <div className="pinned-gallery__caption"><h3>{item.title}</h3><span>{item.category}</span></div>

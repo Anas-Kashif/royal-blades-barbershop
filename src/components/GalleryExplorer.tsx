@@ -31,7 +31,7 @@ export function GalleryExplorer() {
       <div className="gallery-grid" aria-live="polite">
         {items.map((item, index) => (
           <article className="gallery-card" key={item.title}>
-            <div className={`gallery-card__image gallery-card__image--${index + 1}`}>
+            <div className={`gallery-card__image gallery-card__image--${index + 1}${item.category === 'Full looks' ? ' gallery-card__image--full-look' : ''}`}>
               <Image src={item.image} alt={item.alt} fill sizes="(max-width: 800px) 50vw, 33vw" quality={90} />
             </div>
             <div className="gallery-card__copy"><div><span className="eyebrow">{item.category}</span><h2>{item.title}</h2></div><p>{item.description}</p></div>
