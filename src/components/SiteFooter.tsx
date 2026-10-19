@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Clock, MapPin } from '@phosphor-icons/react/dist/ssr';
+import { Clock, GithubLogo, MapPin } from '@phosphor-icons/react/dist/ssr';
 import { business, navigation } from '@/data/business';
 import { BrandMark } from '@/components/BrandMark';
 
@@ -20,8 +20,13 @@ export function SiteFooter() {
         </nav>
       </div>
       <div className="site-footer__bottom">
+        <div className="site-footer__bottom-links">
+          <a className="site-footer__credit" href="https://devbyanas.vercel.app/" target="_blank" rel="noreferrer">Developed by Anas</a>
+          <a className="site-footer__github" href="https://github.com/anas-kashif" target="_blank" rel="noreferrer" aria-label="Anas on GitHub">
+            <GithubLogo size={16} weight="fill" aria-hidden="true" />
+          </a>
+        </div>
         <span>© {new Date().getFullYear()} Royal Blades, Sialkot</span>
-        <Link href="/visit">Get directions <ArrowUpRight size={14} aria-hidden="true" /></Link>
       </div>
     </footer>
   );

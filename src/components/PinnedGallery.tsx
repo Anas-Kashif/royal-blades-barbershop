@@ -70,7 +70,6 @@ export function PinnedGallery() {
             <article className="pinned-gallery__card" key={item.title}>
               <div className={`pinned-gallery__image pinned-gallery__image--${index + 1}`}>
                 <Image src={item.image} alt={item.alt} fill sizes="(max-width: 600px) 47vw, 30vw" quality={90} />
-                <span className="image-index">0{index + 1}</span>
               </div>
               <div className="pinned-gallery__caption"><h3>{item.title}</h3><span>{item.category}</span></div>
             </article>
