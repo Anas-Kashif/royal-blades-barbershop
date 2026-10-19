@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
+import { FirstVisitIntro } from '@/components/FirstVisitIntro';
 import { business } from '@/data/business';
 import { siteMetadataBase } from '@/lib/seo';
 import './globals.css';
@@ -79,10 +80,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <FirstVisitIntro />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
         <main id="main-content">{children}</main>
