@@ -15,7 +15,7 @@ export function ServiceCategories() {
           </div>
           <p>From a quick tidy-up to a full reset, find the service that fits.</p>
         </div>
-        <div className="service-categories__grid">
+        <div className="service-categories__grid" role="region" aria-label="Service categories" tabIndex={0}>
           {serviceCategories.map((category, index) => {
             const CategoryIcon = categoryIcons[index] ?? Scissors;
 
