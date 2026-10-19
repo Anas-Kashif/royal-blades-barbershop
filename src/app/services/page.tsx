@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
 export default function ServicesPage() {
   return (
     <>
-      <PageIntro eyebrow="THE MENU · ROYAL BLADES" title="Good grooming, made simple." description="Choose a service that feels right. Prices are clear, the details are considered, and every look starts with your style." />
+      <PageIntro breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} eyebrow="THE MENU · ROYAL BLADES" title="Good grooming, made simple." description="Choose a service that feels right. Prices are clear, the details are considered, and every look starts with your style." />
       <section className="services-page section-pad">
         <div className="container">
           <div className="section-row services-page__heading">

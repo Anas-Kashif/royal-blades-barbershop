@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
 export default function GalleryPage() {
   return (
     <>
-      <PageIntro eyebrow="STYLE IDEAS · ROYAL BLADES" title="A look worth making your own." description="Explore a few haircut and grooming directions. Use them as inspiration, or bring a reference of your own." />
+      <PageIntro breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]} eyebrow="STYLE IDEAS · ROYAL BLADES" title="A look worth making your own." description="Explore a few haircut and grooming directions. Use them as inspiration, or bring a reference of your own." />
       <section className="gallery-page section-pad">
         <div className="container"><GalleryExplorer /></div>
       </section>

@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 export default function AboutPage() {
   return (
     <>
-      <PageIntro eyebrow="OUR APPROACH" title="A barbershop that feels like yours." description="Royal Blades is here for the little reset: a considered cut, a comfortable chair, and a look that feels like you." />
+      <PageIntro breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Our story' }]} eyebrow="OUR APPROACH" title="A barbershop that feels like yours." description="Royal Blades is here for the little reset: a considered cut, a comfortable chair, and a look that feels like you." />
       <section className="about-story section-pad">
         <div className="container about-story__grid">
           <div className="about-story__art"><Image src="/images/barber-chair.svg" alt="Illustration of a classic barber chair" width={780} height={860} /></div>

@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
 export default function VisitPage() {
   return (
     <>
-      <PageIntro eyebrow="TOHEED TOWN · SIALKOT" title="Come by when it suits." description="Find us on Defense Road, get the opening hours, and make a simple plan for your next cut." />
+      <PageIntro breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Visit us' }]} eyebrow="TOHEED TOWN · SIALKOT" title="Come by when it suits." description="Find us on Defense Road, get the opening hours, and make a simple plan for your next cut." />
       <section className="visit-page section-pad">
         <div className="container visit-page__grid">
           <div className="visit-page__map" role="img" aria-label="Illustrative location preview for Royal Blades in Toheed Town, Sialkot. Open Google Maps for directions.">

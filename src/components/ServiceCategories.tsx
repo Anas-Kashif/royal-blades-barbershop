@@ -1,6 +1,8 @@
 import Link from 'next/link';
-import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
+import { ArrowUpRight, Crown, Scissors, Sparkle, UserFocus } from '@phosphor-icons/react/dist/ssr';
 import { serviceCategories } from '@/data/service-categories';
+
+const categoryIcons = [Scissors, Sparkle, UserFocus, Crown];
 
 export function ServiceCategories() {
   return (
@@ -14,15 +16,26 @@ export function ServiceCategories() {
           <p>From a quick tidy-up to a full reset, find the service that fits.</p>
         </div>
         <div className="service-categories__grid">
-          {serviceCategories.map((category, index) => (
-            <Link className="service-category" href={`/services#service-${category.serviceSlug}`} key={category.serviceSlug}>
-              <span className="service-category__label">{category.label}</span>
-              <span className="service-category__index">0{index + 1}</span>
-              <h3>{category.title}</h3>
-              <p>{category.description}</p>
-              <span className="service-category__link">{category.linkLabel}<ArrowUpRight size={16} aria-hidden="true" /></span>
-            </Link>
-          ))}
+          {serviceCategories.map((category, index) => {
+            const CategoryIcon = categoryIcons[index] ?? Scissors;
+
+            return (
+              <Link
+                className="service-category"
+                href={`/services#service-${category.serviceSlug}`}
+                key={category.serviceSlug}
+                aria-label={`${category.linkLabel}: ${category.title}`}
+              >
+                <CategoryIcon className="service-category__icon" size={86} weight="light" aria-hidden="true" />
+                <span className="service-category__top">
+                  <span className="service-category__label">{category.label}</span>
+                </span>
+                <h3>{category.title}</h3>
+                <p>{category.description}</p>
+                <span className="service-category__link" aria-hidden="true"><ArrowUpRight size={19} /></span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

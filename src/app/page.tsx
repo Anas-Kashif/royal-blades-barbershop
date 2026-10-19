@@ -70,7 +70,6 @@ export default function HomePage() {
             </article>
             <article className="feature-tile feature-tile--detail feature-tile--service">
               <span className="feature-tile__index">THE MENU</span>
-              <div className="feature-tile__service-symbol" aria-hidden="true">RB<span /></div>
               <h3>Good service.<br />Clear prices.</h3>
               <p>Choose what you need, with the price up front.</p>
               <Link className="feature-tile__link" href="/services">Browse services <ArrowUpRight size={16} aria-hidden="true" /></Link>
@@ -78,7 +77,7 @@ export default function HomePage() {
             <article className="feature-tile feature-tile--wide feature-tile--local">
               <span className="feature-tile__index">YOUR NEIGHBORHOOD</span>
               <span className="feature-tile__city-mark" aria-hidden="true">SIALKOT</span>
-              <h3>Your chair is<br />closer than you think.</h3>
+              <h3>Your chair is<br />closer than<br />you think.</h3>
               <p>Find us in Toheed Town on Defense Road.</p>
               <Link className="feature-tile__link" href="/visit">Find the shop <ArrowUpRight size={18} aria-hidden="true" /></Link>
             </article>

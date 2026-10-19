@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useMemo, useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { CalendarBlank, Clock, MapPin } from '@phosphor-icons/react';
@@ -123,7 +124,9 @@ export function BookingForm({ initialService = '' }: BookingFormProps) {
       </form>
 
       <aside className="booking-aside">
-        <div className="booking-aside__art" aria-hidden="true"><div className="booking-aside__ring" /><span>RB</span></div>
+        <div className="booking-aside__art" aria-hidden="true">
+          <Image className="booking-aside__logo" src="/images/royal-blades-favicon-white.png" alt="" width={256} height={256} />
+        </div>
         <div className="booking-aside__details">
           <p><MapPin size={18} aria-hidden="true" /><span>{business.address.street}<br />{business.address.city}, {business.address.country}</span></p>
           <p><Clock size={18} aria-hidden="true" /><span>Mon to Sat <strong>10 am to 6 pm</strong><br />Sunday <strong>11 am to 3:30 pm</strong></span></p>

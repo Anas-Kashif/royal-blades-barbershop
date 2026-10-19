@@ -11,7 +11,7 @@ export const metadata = pageMetadata({
 export default function BookingReviewPage() {
   return (
     <>
-      <PageIntro eyebrow="YOUR VISIT PREVIEW" title="One last look." description="Check your visit details, then see the shop location and opening hours." />
+      <PageIntro breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Book a visit', href: '/book' }, { label: 'Review' }]} eyebrow="YOUR VISIT PREVIEW" title="One last look." description="Check your visit details, then see the shop location and opening hours." />
       <section className="booking-page section-pad"><div className="container"><BookingReview /></div></section>
     </>
   );

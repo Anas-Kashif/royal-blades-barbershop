@@ -20,7 +20,7 @@ export default async function BookPage({ searchParams }: BookPageProps) {
 
   return (
     <>
-      <PageIntro eyebrow="YOUR VISIT PREVIEW" title="A good cut, on your time." description="Choose a service and a time that works. You’ll see a preview before you finish." />
+      <PageIntro breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Book a visit' }]} eyebrow="YOUR VISIT PREVIEW" title="A good cut, on your time." description="Choose a service and a time that works. You’ll see a preview before you finish." />
       <section className="booking-page section-pad"><div className="container"><BookingForm initialService={initialService} /></div></section>
     </>
   );
