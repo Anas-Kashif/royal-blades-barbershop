@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { FirstVisitIntro } from '@/components/FirstVisitIntro';
@@ -77,8 +78,11 @@ const localBusiness = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <Script id="first-visit-prepaint" strategy="beforeInteractive">
+          {`document.documentElement.classList.add('first-visit-pending'); window.setTimeout(function () { document.documentElement.classList.remove('first-visit-pending'); }, 8000);`}
+        </Script>
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

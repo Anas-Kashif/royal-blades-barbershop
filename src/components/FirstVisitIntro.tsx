@@ -6,7 +6,7 @@ import { GithubLogo } from '@phosphor-icons/react/dist/ssr';
 const introMessage = 'Developed by Anas Kashif';
 
 export function FirstVisitIntro() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
   const [typedMessage, setTypedMessage] = useState('');
 
@@ -18,6 +18,7 @@ export function FirstVisitIntro() {
     let phaseTimeout: number | undefined;
     let removeTimeout: number | undefined;
     const beginExit = () => {
+      document.documentElement.classList.remove('first-visit-pending');
       setIsExiting(true);
       removeTimeout = window.setTimeout(() => setIsVisible(false), 1050);
     };

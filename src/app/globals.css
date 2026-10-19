@@ -18,6 +18,8 @@
 * { box-sizing: border-box; }
 html { overflow-x: clip; scroll-behavior: smooth; background: var(--color-bg); }
 body { overflow-x: clip; margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+html.first-visit-pending, html.first-visit-pending body { background: #080808; }
+html.first-visit-pending body > :not(.first-visit-intro) { visibility: hidden; }
 body, button, input, select { font-family: var(--font-body); }
 button, a, input, select { -webkit-tap-highlight-color: transparent; }
 button, input, select { font-size: inherit; }
